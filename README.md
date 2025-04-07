@@ -1,12 +1,12 @@
 Follow these steps to install and run the project on your local machine:
 
-Step 1. Clone the Repository
+Step 1. Clone the Repository:
         git clone <repository-url>// Replace <repository-url> with actual repo link.
   
-Step 2. Go to the Project Directory
+Step 2. Go to the Project Directory:
         cd your-project-folder-name //(newp\game-app\game-app)
    
-Step 3. Install Dependencies
+Step 3. Install Dependencies:
        npm install // Make sure you have Node.js and npm installed.
        This will install packages including:
        ⮞react
@@ -18,7 +18,7 @@ Step 3. Install Dependencies
           1.npm install @clerk/clerk-react
           2.npm install @reduxjs/toolkit react-redux
 
-Step 4. Start Development Server
+Step 4. Start Development Server:
         npm run dev
    
 

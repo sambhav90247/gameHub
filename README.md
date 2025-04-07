@@ -4,7 +4,7 @@ Step 1. Clone the Repository:
         git clone <repository-url>// Replace <repository-url> with actual repo link.
   
 Step 2. Go to the Project Directory:
-        cd your-project-folder-name //(newp\game-app\game-app)
+        cd your-project-folder-name 
    
 Step 3. Install Dependencies:
        npm install // Make sure you have Node.js and npm installed.

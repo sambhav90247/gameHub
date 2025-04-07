@@ -17,6 +17,8 @@ Step 3. Install Dependencies:
        If Clerk or Redux packages are missing, you can manually install them by using the following command:
           1.npm install @clerk/clerk-react
           2.npm install @reduxjs/toolkit react-redux
+ Step 4- You have to create the .env.local file in your root folder and paste the following one line code in it:
+          VITE_CLERK_PUBLISHABLE_KEY=pk_test_dXB3YXJkLXBlbmd1aW4tOTkuY2xlcmsuYWNjb3VudHMuZGV2JA
 
 Step 4. Start Development Server:
         npm run dev

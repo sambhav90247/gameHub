@@ -20,11 +20,6 @@ node_modules/
 dist/
 dist-ssr/
 
-# Local env files
-.env
-.env.*.local
-*.local
-
 # Vite cache
 .vite/
 .cache/
@@ -33,19 +28,23 @@ dist-ssr/
 .vscode/*
 !.vscode/extensions.json
 .idea/
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# OS
+# OS-specific files
+.DS_Store
 Thumbs.db
 ehthumbs.db
 
-# Clerk (if you accidentally added secrets)
+# Clerk secrets (if used)
 .clerk/
 
-# Mac specific
-*.DS_Store
+# --- IMPORTANT CHANGE ---
+# Do NOT ignore .env
+# (Commented out to allow .env to be committed)
+# .env
+.env.*.local
+*.local

@@ -17,6 +17,7 @@ import { useState, useRef } from "react";
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 
+
 const ProtectedRoute = ({ children }) => {
   return (
     <>
@@ -47,46 +48,44 @@ const App = () => {
   };
 
   return (
-    <ClerkProvider publishableKey={clerkPubKey}>
-      <Provider store={store}>
-        <Router>
-          <div>
-            <Header
-              onSearch={setSearchQuery}
-              onToggleFilters={handleToggleFilters}
-              onResetHome={handleResetHome}
-            />
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <HomePage
-                    searchQuery={searchQuery}
-                    onToggleFilters={handleToggleFilters}
-                    isSidebarVisible={isSidebarVisible}
-                    setResetRef={resetHomeRef}
-                  />
-                }
+    <Provider store={store}>
+    <Router>
+      <div>
+        <Header
+          onSearch={setSearchQuery}
+          onToggleFilters={handleToggleFilters}
+          onResetHome={handleResetHome}
+        />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                searchQuery={searchQuery}
+                onToggleFilters={handleToggleFilters}
+                isSidebarVisible={isSidebarVisible}
+                setResetRef={resetHomeRef}
               />
-              <Route
-                path="/favorites"
-                element={
-                  <ProtectedRoute>
-                    <FavoritesPage
-                      searchQuery={searchQuery}
-                      isSidebarVisible={isSidebarVisible}
-                      onToggleFilters={handleToggleFilters}
-                    />
-                  </ProtectedRoute>
-                }
-              />
-              <Route path="/game/:id" element={<GameDetails />} /> 
-              <Route path="/sign-in" element={<SignInPage />} />
-            </Routes>
-          </div>
-        </Router>
-      </Provider>
-    </ClerkProvider>
+            }
+          />
+          <Route
+            path="/favorites"
+            element={
+              <ProtectedRoute>
+                <FavoritesPage
+                  searchQuery={searchQuery}
+                  isSidebarVisible={isSidebarVisible}
+                  onToggleFilters={handleToggleFilters}
+                />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/game/:id" element={<GameDetails />} />
+          <Route path="/sign-in" element={<SignInPage />} />
+        </Routes>
+      </div>
+    </Router>
+  </Provider>
   );
 };
 

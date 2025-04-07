@@ -22,10 +22,10 @@ const Header = ({ onSearch, onToggleFilters, onResetHome }) => {
   };
 
   const handleLogoClick = () => {
-    setQuery(""); // Clear search input field
-    if (onSearch) onSearch(""); // Reset search in parent
-    if (onResetHome) onResetHome(); // Custom reset logic from parent
-    navigate("/"); // Navigate to homepage
+    setQuery(""); 
+    if (onSearch) onSearch(""); 
+    if (onResetHome) onResetHome(); 
+    navigate("/"); 
   };
 
   return (

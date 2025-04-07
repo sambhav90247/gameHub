@@ -20,14 +20,14 @@ const FiltersSidebar = ({ onFilterChange, isVisible, onToggle }) => {
   };
 
   const handleClose = () => {
-    if (onToggle) onToggle(); // Close the sidebar
+    if (onToggle) onToggle(); 
   };
 
   return (
     <div className={`filters-sidebar ${isVisible ? "show" : ""}`}>
   <button1 className="close-btn" onClick={handleClose}>X</button1>
   <h3>🎮 Filters</h3>
-  {/* Baaki filters yahan */}
+ 
 
       <label>Category:</label>
       <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>

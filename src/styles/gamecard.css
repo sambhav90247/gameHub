@@ -96,7 +96,7 @@
   background: #ff9900;
 }
 
-/* ✅ Tablet (600px–900px) */
+
 @media (max-width: 900px) and (min-width: 601px) {
   .game-card {
     width: 180px;
@@ -122,7 +122,7 @@
   }
 }
 
-/* ✅ Mobile (<=600px) */
+
 @media (max-width: 600px) {
   .game-card {
     width: 160px;
@@ -152,7 +152,7 @@
   }
 }
 
-/* ✅ Extra Small Devices (<=400px) */
+
 @media (max-width: 400px) {
   .game-card {
     width: 140px;

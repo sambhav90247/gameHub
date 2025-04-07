@@ -60,7 +60,7 @@ const HomePage = forwardRef(({ searchQuery, onToggleFilters, isSidebarVisible, s
       filtered = filtered.sort((a, b) => b.reviews_count - a.reviews_count);
     }
     setFilteredGames(filtered);
-    setCurrentPage(1); // Reset to page 1 on filter change
+    setCurrentPage(1); 
   }, [searchQuery, games, filters]);
 
   useImperativeHandle(setResetRef, () => ({

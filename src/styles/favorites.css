@@ -20,9 +20,9 @@
   align-items: center;
 }
 
-/* Adjust grid when sidebar is visible */
+
 .sidebar-visible .favorites-container {
-  margin-left: 250px; /* Adjust based on actual sidebar width */
+  margin-left: 250px; 
 }
 
 .favorites-container {
@@ -33,7 +33,7 @@
   flex: 1;
 }
 
-/* Game Card Styling */
+
 .favorite-card {
   width: 200px;
   background-color: #1a1a1a;
@@ -55,7 +55,7 @@
   border-radius: 10px 10px 0 0;
 }
 
-/* Link and Text Styling */
+
 .game-link {
   text-decoration: none;
   color: white;
@@ -75,7 +75,7 @@
   margin-bottom: 10px;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 1024px) {
   .sidebar-visible .favorites-container {
     margin-left: 200px;

@@ -83,7 +83,6 @@
   background: #444;
 }
 
-/* ✅ Responsive - Tablet and down */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -115,7 +114,7 @@
   }
 }
 
-/* ✅ Extra Small Devices (<= 400px) */
+
 @media (max-width: 400px) {
   .logo {
     font-size: 1.5rem;

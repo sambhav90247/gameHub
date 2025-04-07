@@ -1,4 +1,4 @@
-/* Reset default margins and padding */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Homepage layout */
+
 .homepage {
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Sidebar styles */
+
 .filters-sidebar {
   width: 220px;
   background: #222;
@@ -47,7 +47,7 @@ body {
   transform: translateX(0);
 }
 
-/* Game container layout */
+
 .game-container {
   display: flex;
   flex-wrap: wrap;
@@ -70,7 +70,7 @@ body {
   display: contents;
 }
 
-/* Game images */
+
 .game-container img {
   width: 100%;
   height: auto;
@@ -82,7 +82,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Pagination styling */
+
 .pagination,
 .pagination-wrapper {
   grid-column: 1 / -1;
@@ -118,7 +118,7 @@ body {
   font-weight: bold;
 }
 
-/* Responsive tweaks */
+
 @media (max-width: 1024px) {
   .game-container.sidebar-visible {
     margin-left: 0;

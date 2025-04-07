@@ -9,7 +9,7 @@ import {
 } from "@clerk/clerk-react";
 import HomePage from "./pages/HomePage";
 import FavoritesPage from "./pages/FavoritesPage";
-import GameDetails from "./pages/GameDetailPage"; // ✅ Fix: import sahi component
+import GameDetails from "./pages/GameDetailPage";
 import Header from "./components/Header";
 import SignInPage from "./pages/SignInPage";
 import { useState, useRef } from "react";
@@ -42,7 +42,7 @@ const App = () => {
     setIsSidebarVisible(false);
 
     if (resetHomeRef.current) {
-      resetHomeRef.current.resetToDefault(); // 👈 call reset from HomePage
+      resetHomeRef.current.resetToDefault(); 
     }
   };
 
@@ -80,7 +80,7 @@ const App = () => {
                   </ProtectedRoute>
                 }
               />
-              <Route path="/game/:id" element={<GameDetails />} /> {/* ✅ Route fix */}
+              <Route path="/game/:id" element={<GameDetails />} /> 
               <Route path="/sign-in" element={<SignInPage />} />
             </Routes>
           </div>

@@ -1,0 +1,135 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1100;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ff4500;
+}
+
+.search-bar {
+  padding: 8px;
+  width: 250px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin: 0 10px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.filter-toggle-btn {
+  background: #ff4500;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.filter-toggle-btn:hover {
+  background: #e03e00;
+  transform: scale(1.05);
+}
+
+.favorites-btn {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.favorites-btn:hover {
+  background: #e6b800;
+}
+
+.signin-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.signin-btn:hover {
+  background: #444;
+}
+
+/* ✅ Responsive - Tablet and down */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .filter-toggle-btn,
+  .favorites-btn,
+  .signin-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ✅ Extra Small Devices (<= 400px) */
+@media (max-width: 400px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .search-bar {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+
+  .filter-toggle-btn,
+  .favorites-btn,
+  .signin-btn {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  }
+}

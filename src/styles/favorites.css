@@ -1,0 +1,140 @@
+.favorites-wrapper {
+  padding: 20px;
+}
+
+.favorites-heading {
+  text-align: center;
+  color: rgb(244, 70, 11);
+  margin-bottom: 20px;
+}
+
+.no-fav {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+.favorites-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Adjust grid when sidebar is visible */
+.sidebar-visible .favorites-container {
+  margin-left: 250px; /* Adjust based on actual sidebar width */
+}
+
+.favorites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Game Card Styling */
+.favorite-card {
+  width: 200px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.favorite-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.favorite-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Link and Text Styling */
+.game-link {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.game-link h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+  color: #ffcc00;
+}
+
+.game-link p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .sidebar-visible .favorites-container {
+    margin-left: 200px;
+  }
+
+  .favorite-card {
+    width: 180px;
+  }
+
+  .favorite-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-visible .favorites-container {
+    margin-left: 0;
+  }
+
+  .favorites-container {
+    gap: 15px;
+  }
+
+  .favorite-card {
+    width: 160px;
+  }
+
+  .favorite-card img {
+    height: 200px;
+  }
+
+  .game-link h3 {
+    font-size: 0.95rem;
+  }
+
+  .game-link p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-wrapper {
+    padding: 10px;
+  }
+
+  .favorite-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .favorite-card img {
+    height: 180px;
+  }
+
+  .game-link h3 {
+    font-size: 0.9rem;
+  }
+
+  .game-link p {
+    font-size: 0.8rem;
+  }
+}

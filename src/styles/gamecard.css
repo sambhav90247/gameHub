@@ -1,0 +1,175 @@
+.game-card {
+  width: 200px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  padding: 0;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.game-card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.game-info {
+  width: 100%;
+  padding: 8px;
+  background: #222;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  min-height: 0;
+  max-height: calc(35% - 10px);
+  overflow: hidden;
+}
+
+.game-info h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #ffcc00;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.game-category,
+.game-tags,
+.game-rating {
+  font-size: 0.75rem;
+  margin: 2px 0;
+  text-align: center;
+}
+
+.game-category {
+  color: #42aaff;
+  font-weight: bold;
+}
+
+.game-tags {
+  color: #ffcc00;
+  font-style: italic;
+}
+
+.game-rating {
+  color: #ffffff;
+}
+
+.fav-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: #ffcc00;
+  color: #222;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  border-radius: 0 0 10px 10px;
+  margin-top: auto;
+}
+
+.fav-btn.active {
+  background: #ff4500;
+  color: white;
+}
+
+.fav-btn:hover {
+  background: #ff9900;
+}
+
+/* ✅ Tablet (600px–900px) */
+@media (max-width: 900px) and (min-width: 601px) {
+  .game-card {
+    width: 180px;
+    height: 320px;
+  }
+
+  .game-card img {
+    height: 65%;
+  }
+
+  .game-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .game-category,
+  .game-tags,
+  .game-rating {
+    font-size: 0.72rem;
+  }
+
+  .fav-btn {
+    font-size: 0.8rem;
+  }
+}
+
+/* ✅ Mobile (<=600px) */
+@media (max-width: 600px) {
+  .game-card {
+    width: 160px;
+    height: 300px;
+  }
+
+  .game-card img {
+    height: 65%;
+  }
+
+  .game-info {
+    max-height: calc(35% - 10px);
+  }
+
+  .game-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .game-category,
+  .game-tags,
+  .game-rating {
+    font-size: 0.68rem;
+  }
+
+  .fav-btn {
+    font-size: 0.75rem;
+  }
+}
+
+/* ✅ Extra Small Devices (<=400px) */
+@media (max-width: 400px) {
+  .game-card {
+    width: 140px;
+    height: 280px;
+  }
+
+  .game-info h3 {
+    font-size: 0.8rem;
+  }
+
+  .game-category,
+  .game-tags,
+  .game-rating {
+    font-size: 0.65rem;
+  }
+
+  .fav-btn {
+    font-size: 0.7rem;
+  }
+}

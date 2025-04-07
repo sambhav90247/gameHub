@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import {
-  ClerkProvider,
   SignedIn,
   SignedOut,
   RedirectToSignIn,
@@ -13,10 +12,6 @@ import GameDetails from "./pages/GameDetailPage";
 import Header from "./components/Header";
 import SignInPage from "./pages/SignInPage";
 import { useState, useRef } from "react";
-
-const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-
-
 
 const ProtectedRoute = ({ children }) => {
   return (
@@ -43,49 +38,49 @@ const App = () => {
     setIsSidebarVisible(false);
 
     if (resetHomeRef.current) {
-      resetHomeRef.current.resetToDefault(); 
+      resetHomeRef.current.resetToDefault();
     }
   };
 
   return (
     <Provider store={store}>
-    <Router>
-      <div>
-        <Header
-          onSearch={setSearchQuery}
-          onToggleFilters={handleToggleFilters}
-          onResetHome={handleResetHome}
-        />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <HomePage
-                searchQuery={searchQuery}
-                onToggleFilters={handleToggleFilters}
-                isSidebarVisible={isSidebarVisible}
-                setResetRef={resetHomeRef}
-              />
-            }
+      <Router>
+        <div>
+          <Header
+            onSearch={setSearchQuery}
+            onToggleFilters={handleToggleFilters}
+            onResetHome={handleResetHome}
           />
-          <Route
-            path="/favorites"
-            element={
-              <ProtectedRoute>
-                <FavoritesPage
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <HomePage
                   searchQuery={searchQuery}
-                  isSidebarVisible={isSidebarVisible}
                   onToggleFilters={handleToggleFilters}
+                  isSidebarVisible={isSidebarVisible}
+                  setResetRef={resetHomeRef}
                 />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/game/:id" element={<GameDetails />} />
-          <Route path="/sign-in" element={<SignInPage />} />
-        </Routes>
-      </div>
-    </Router>
-  </Provider>
+              }
+            />
+            <Route
+              path="/favorites"
+              element={
+                <ProtectedRoute>
+                  <FavoritesPage
+                    searchQuery={searchQuery}
+                    isSidebarVisible={isSidebarVisible}
+                    onToggleFilters={handleToggleFilters}
+                  />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/game/:id" element={<GameDetails />} />
+            <Route path="/sign-in" element={<SignInPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </Provider>
   );
 };
 
